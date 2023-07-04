@@ -1,3 +1,6 @@
+ 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +17,7 @@
     <div class="question ml-sm-5 pl-sm-5 pt-2">
         <div class="py-2 h5"><b>Q. which option best describes your job role?</b></div>
         <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
-            <label class="options">Small Business Owner or Employee
+            <label class="options">Small Business Owner or 
                 <input type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
