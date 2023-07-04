@@ -35,10 +35,10 @@
     </div>
     <div class="d-flex align-items-center pt-3">
         <div id="prev">
-            <button class="btn btn-primary">Previous</button>
+            <button class="btn btn-primary">Precedent</button>
         </div>
         <div class="ml-auto mr-sm-5">
-            <button class="btn btn-success">Next</button>
+            <button class="btn btn-success">Suivant</button>
         </div>
     </div>
 </div>
