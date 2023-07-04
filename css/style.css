@@ -1,12 +1,16 @@
-
-
-
 /* login css */
-
 .divider:after,
 .divider:before {
 content: "";
 flex: 1;
 height: 1px;
 background: #eee;
+}
+
+.s_connexion{
+    margin-top: 260px;
+}
+
+body{
+    background-color: rgb(124, 119, 119);
 }
