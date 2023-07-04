@@ -23,10 +23,10 @@
           class="img-fluid" alt="Phone image">
       </div>
       <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-        <form>
+        <form action="traitement.php" method="POST">
           <!-- Email input -->
           <div class="form-outline mb-4">
-            <input type="email" id="form1Example13" class="form-control form-control-lg" />
+            <input name="nickname" type="text" id="form1Example13" class="form-control form-control-lg" />
             <label class="form-label" for="form1Example13">Login</label>
           </div>
           <!-- Submit button -->
@@ -43,7 +43,6 @@
           <a class="btn btn-primary btn-lg btn-block" style="background-color: #55acee" href="#!"
             role="button">
             <i class="fab fa-twitter me-2"></i></a>
-
         </form>
       </div>
     </div>
