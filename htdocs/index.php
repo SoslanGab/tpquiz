@@ -21,16 +21,15 @@
         min-height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
     }
 
     body {
-        background-image: url('https://external-preview.redd.it/Tf2MC-orVRAI8OL5tjyF4k4H2Q6QLHTWllekGfqdt3c.png?width=960&crop=smart&auto=webp&s=be4ab9a2fa3ca2f7011799377f118a8dbc64aacb');
+        background-image: url('image/foretsombre.jpeg');
         background-size: cover;
     }
 
     canvas {
-        filter: blur(1px);
+        filter: blur(2px);
         position: fixed;
         top: 0;
         left: 0;
@@ -78,7 +77,7 @@
                 </form>
             </div>
             <div class="col-md-8 col-lg-7 col-xl-6">
-                <img src="image/quizzimg.png"
+                <img src="image/quizfilm.jpg"
                      class="img-fluid" alt="image">
             </div>
         </div>

@@ -46,11 +46,10 @@ foreach ($options as &$questionOptions) {
         min-height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
     }
 
     body {
-        background-image: url('https://external-preview.redd.it/Tf2MC-orVRAI8OL5tjyF4k4H2Q6QLHTWllekGfqdt3c.png?width=960&crop=smart&auto=webp&s=be4ab9a2fa3ca2f7011799377f118a8dbc64aacb');
+        background-image: url('image/foretsombre.jpeg');
         background-size: cover;
     }
 
@@ -67,7 +66,10 @@ foreach ($options as &$questionOptions) {
 
 </head>
 <body>
+<!-- effets arrière plan -->
     <canvas id="canvas"></canvas>
+<!-- effets arrière plan -->
+
     <section class="s_connexion">
         <div class="container mt-sm-5 my-1">
             <div id="question-container" class="question ml-sm-5 pl-sm-5 pt-2"></div>
@@ -83,6 +85,7 @@ foreach ($options as &$questionOptions) {
     </section>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
         $(document).ready(function() {
             var questions = <?php echo json_encode($questions); ?>;
