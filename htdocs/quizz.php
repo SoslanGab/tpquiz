@@ -1,5 +1,6 @@
 <?php
 include 'connexion.php';
+include 'save_response.php';
 
 // Récupérer les questions depuis la base de données
 $query = "SELECT question, respons, option1, option2, option3 FROM quizz";
@@ -26,6 +27,29 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 foreach ($options as &$questionOptions) {
     shuffle($questionOptions['options']);
 }
+
+
+// if (isset($_POST['save_response'])) {
+//     $question = $_POST['question'];
+//     $response = $_POST['response'];
+//     $responsUser = $_POST['responsUser'];
+
+//     $query = $bdd->prepare("INSERT INTO reponse (question, response, responsUser) VALUES (:question, :response, :responsUser)");
+//     $query->execute([':question' => $question, ':response' => $response, ':responsUser' => $responsUser]);
+    
+// }
+
+// if ($responsUser == $response) {
+//     echo "Bonne réponse";
+//     $query = $bdd->prepare("INSERT INTO score (scores) VALUES (:scores)");
+//     $query->execute([':score' => 1]);
+// }else {
+//     echo "Mauvaise réponse";
+// }
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -68,21 +92,22 @@ foreach ($options as &$questionOptions) {
 </head>
 <body>
     <canvas id="canvas"></canvas>
-    <section class="s_connexion">
-        <div class="container mt-sm-5 my-1">
-            <div id="question-container" class="question ml-sm-5 pl-sm-5 pt-2"></div>
-            <div class="d-flex align-items-center pt-3">
-                <div id="prev">
-                    <button class="btn btn-primary">Précédent</button>
-                </div>
-                <div class="ml-auto mr-sm-5">
-                    <button id="next" class="btn btn-success">Suivant</button>
+        <section class="s_connexion">
+            <div class="container mt-sm-5 my-1">
+                <div id="question-container" class="question ml-sm-5 pl-sm-5 pt-2"></div>
+                <div class="d-flex align-items-center pt-3">
+                    <div id="prev">
+                        <button class="btn btn-primary">Précédent</button>
+                    </div>
+                    <div class="ml-auto mr-sm-5">
+                        <button id="next" class="btn btn-success">Suivant</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
             var questions = <?php echo json_encode($questions); ?>;
@@ -114,33 +139,45 @@ foreach ($options as &$questionOptions) {
             }
 
             // Événement lors du clic sur le bouton "Suivant"
-            $("#next").click(function() {
-                var selectedOption = $("input[name=radio]:checked").val();
+                $("#next").click(function() {
+                    var selectedOption = $("input[name=radio]:checked").val();
 
-                // Valider la réponse sélectionnée
-                if (selectedOption) {
-                    // Enregistrer la réponse dans la base de données
-                    userResponses[questions[currentQuestion]] = selectedOption;
-                    $.post("save_response.php", { question: questions[currentQuestion], response: selectedOption, responsUser: options[currentQuestion].respons })
-                        .done(function(data) {
-                            console.log("Réponse enregistrée avec succès !");
-                        })
-                        .fail(function() {
-                            console.log("Erreur lors de l'enregistrement de la réponse.");
+                    // Valider la réponse sélectionnée
+                    if (selectedOption) {
+                        // Enregistrer la réponse de l'utilisateur
+                        var question = questions[currentQuestion];
+                        var responsUser = options[currentQuestion].respons;
+
+                        $.ajax({
+                            url: "save_response.php",
+                            method: "POST",
+                            data: { question: question, response: selectedOption, responsUser: responsUser },
+                            success: function(data) {
+                                console.log("Réponse enregistrée avec succès !");
+                                var response = JSON.parse(data);
+                                // ...
+                            },
+                            error: function() {
+                                console.log("Erreur lors de l'enregistrement de la réponse.");
+                            }
                         });
-                }
+                    }
 
-                // Passer à la question suivante
-                currentQuestion++;
+                    // Passer à la question suivante
+                    currentQuestion++;
 
-                // Vérifier s'il y a encore des questions à afficher
-                if (currentQuestion < questions.length) {
-                    displayQuestion();
-                } else {
-                    // Afficher un message de fin du quizz ou rediriger vers une autre page
-                    $("#question-container").html("Quizz terminé !");
-                }
-            });
+                    // Vérifier s'il y a encore des questions à afficher
+                    if (currentQuestion < questions.length) {
+                        displayQuestion();
+                    } else {
+                        // Afficher un message de fin du quizz ou rediriger vers une autre page
+                        $("#question-container").html("Quizz terminé !");
+                    }
+
+                    // Désactiver les options de réponse après avoir choisi une réponse
+                    $("#options input").attr("disabled", true);
+                });
+
 
             // Événement lors du clic sur le bouton "Précédent"
             $("#prev").click(function() {
@@ -156,7 +193,8 @@ foreach ($options as &$questionOptions) {
                 // Afficher la question précédente
                 displayQuestion();
             });
-        });
+        });        
+
     </script>
 </body>
 </html>

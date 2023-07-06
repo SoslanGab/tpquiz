@@ -22,9 +22,7 @@ if (isset($_POST['connect'])) {
         $insertQuery->execute([':nickname' => $nickname]);
         $userid = $bdd->lastInsertId();
     }
-
-    header("location: quizz.php");
 }
-
+header('Location: quizz.php?userid=' . $userid);
 
 

@@ -56,7 +56,7 @@
                     <!-- Email input -->
                     <div class="form-outline mb-4">
                         <input name="nickname" type="text" id="form1Example13"
-                               class="form-control form-control-lg"/>
+                               class="form-control form-control-lg" />
                         <label class="form-label" for="form1Example13">Login</label>
                     </div>
 

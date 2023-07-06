@@ -121,3 +121,15 @@ body{
         word-spacing: 2px;
     } 
 }
+
+/* Style pour la réponse sélectionnée */
+.correct {
+    background-color: green;
+    color: white;
+}
+
+/* Style pour les réponses incorrectes */
+.incorrect {
+    background-color: red;
+    color: white;
+}
