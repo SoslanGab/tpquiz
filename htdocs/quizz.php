@@ -70,11 +70,10 @@ foreach ($options as &$questionOptions) {
         min-height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
     }
 
     body {
-        background-image: url('https://external-preview.redd.it/Tf2MC-orVRAI8OL5tjyF4k4H2Q6QLHTWllekGfqdt3c.png?width=960&crop=smart&auto=webp&s=be4ab9a2fa3ca2f7011799377f118a8dbc64aacb');
+        background-image: url('image/foretsombre.jpeg');
         background-size: cover;
     }
 
@@ -91,17 +90,19 @@ foreach ($options as &$questionOptions) {
 
 </head>
 <body>
+<!-- effets arrière plan -->
     <canvas id="canvas"></canvas>
-        <section class="s_connexion">
-            <div class="container mt-sm-5 my-1">
-                <div id="question-container" class="question ml-sm-5 pl-sm-5 pt-2"></div>
-                <div class="d-flex align-items-center pt-3">
-                    <div id="prev">
-                        <button class="btn btn-primary">Précédent</button>
-                    </div>
-                    <div class="ml-auto mr-sm-5">
-                        <button id="next" class="btn btn-success">Suivant</button>
-                    </div>
+<!-- effets arrière plan -->
+
+    <section class="s_connexion">
+        <div class="container mt-sm-5 my-1">
+            <div id="question-container" class="question ml-sm-5 pl-sm-5 pt-2"></div>
+            <div class="d-flex align-items-center pt-3">
+                <div id="prev">
+                    <button class="btn btn-primary">Précédent</button>
+                </div>
+                <div class="ml-auto mr-sm-5">
+                    <button id="next" class="btn btn-success">Suivant</button>
                 </div>
             </div>
         </section>
