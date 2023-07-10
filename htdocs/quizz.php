@@ -71,7 +71,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         var currentQuestion = 0;
         var userResponses = {};
 
-        // Afficher la première question
+        // Afficher la première question///////////
         displayQuestion();
 
         // Fonction pour afficher la question actuelle
