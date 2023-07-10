@@ -126,4 +126,45 @@ font-size : 1.9rem;
 .incorrect {
     background-color: red;
     color: white;
+
+}
+
+
+
+.options input[type="radio"]:checked ~ .checkmark {
+    background: #8d0000;
+    transition: 300ms ease-in-out 0s;
+}
+
+.options input[type="radio"]:checked ~ .checkmark:after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.options label.correct {
+    background-color: green;
+    color: white;
+}
+
+.options label.incorrect {
+    background-color: red;
+    color: white;
+}
+
+.options input[type="radio"]:checked ~ .checkmark {
+    background: #8d0000;
+    transition: 300ms ease-in-out 0s;
+}
+
+.options input[type="radio"]:checked ~ .checkmark:after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.options label.correct {
+    background-color: green;
+    color: white;
+}
+
+.options label.incorrect {
+    background-color: red;
+    color: white;
 }
