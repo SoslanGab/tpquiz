@@ -13,9 +13,6 @@ background: #8b0000;
     margin-top: 260px;
 }
 
-body{
-    background-color: rgb(124, 119, 119);
-}  
 
 
 /* code css questionnaires */
@@ -27,8 +24,9 @@ body{
     box-sizing: border-box;
 }
 
-body{
-    background-color: #080808;
+.h5{
+font-size : 1.9rem;
+
 }
 .container{
     background-color: #0f0f0f;
@@ -36,24 +34,28 @@ body{
     border-radius: 10px;
     padding: 20px;
     font-family: 'Smooch', serif;
-    font-size: 20px;
-    max-width: 700px;
+    font-size: 30px;
+    max-width: 900px;
 }
 .container > p{
-    font-size: 32px;
+    font-size: 100px;
 }
 .question{
-    width: 75%;
+    width: 90%;
 }
 .options{
     position: relative;
     padding-left: 40px;
+    display:flex;
+    align-items: center;
+    margin-top: 40px;
 }
 #options label{
     display: block;
     margin-bottom: 15px;
-    font-size: 14px;
+    font-size: 20px;
     cursor: pointer;
+    flex: 1;
 }
 .options input{
     opacity: 0;
@@ -92,20 +94,9 @@ body{
     transform: translate(-50%,-50%) scale(1);
 }
 
-#next:hover{
-    background-color: #181818;
-    border: 1px solid #7c0000;
-}
 
-.btn-primary{
-    background-color: #8d0000;
-    color: #ffffff;
-    border: 1px solid #8d0000
-}
-.btn-primary:hover{
-    background-color: #141414;
-    border: 1px solid #7c0000;
-}
+
+
 .btn-success{
     padding: 5px 25px;
     background-color: #8d0000;
@@ -116,6 +107,13 @@ body{
         width: 100%;
         word-spacing: 2px;
     } 
+}
+
+@media (min-width: 768px) {
+.pl-md-5, 
+.px-md-5{
+    padding-left: 12rem!important;
+}
 }
 
 /* Style pour la réponse sélectionnée */
