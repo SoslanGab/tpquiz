@@ -27,9 +27,9 @@ include 'connexion.php';
                         <input name="nickname" type="text" id="form1Example13" class="form-control form-control-lg" required/>
                         <label class="form-label" for="form1Example13">Login</label>
                        </div> 
-<!-- 
+
                     <a href="traitement.php" class="buttonplay">
-                        <span>Play</span> -->
+                        <span>Play</span> 
                     <div class="liquid">
                         <input type="submit" value="Play" class="liquid">
                     </div>
