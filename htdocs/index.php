@@ -15,7 +15,7 @@ include 'connexion.php';
 
 </head>
 <body>
-<div id="rain-container"></div>
+<!-- <div id="rain-container"></div> -->
 
 <section id="s_connexion" class="vh-100 s_connexion">
     <div class="container  h-150">

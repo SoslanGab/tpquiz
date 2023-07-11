@@ -50,7 +50,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
     <!-- <canvas id="canvas"></canvas> -->
     <!-- effets arrière plan -->
 
-<div id="rain-container"></div>
+<!-- <div id="rain-container"></div> -->
 
 
 <section id= s_connexion class="vh-100 s_connexion">
@@ -63,7 +63,15 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                     <div class="liquid"></div>
                 </a>
             </div>
-        </section>
+            <div id="next">
+                <a href=""  class="buttonnext">
+                    <span>Next</span>
+                    <div class="liquid"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
@@ -136,7 +144,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                         }
                     });
                     // Passer à la question suivante
-                    currentQuestion++;
+                        currentQuestion++;
                     // Incrémenter le score de 1
                         current_score++;
 
