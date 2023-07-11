@@ -52,7 +52,7 @@ a {
   
   a .liquid {
     position: absolute;
-    top: -80px;
+    top: -60px;
     left: 0;
     width: 200px;
     height: 200px;
@@ -98,6 +98,10 @@ a {
     }
   }
   
+  .btn-block:hover{
+    color: #970000;
+    border-color: #970000;
+  }
 
 .buttonplay:hover{
     text-decoration: none;
@@ -111,4 +115,65 @@ a {
     text-decoration: none;
 }
 
+#particles-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+  }
 
+  
+  #rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .raindrop {
+    filter: blur(2px);
+    position: absolute;
+    width: 3px;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(100, 3, 3, 0.5) 0%, rgba(63, 2, 2, 0) 100%);
+    animation: raindropAnimation 4s infinite linear;
+  }
+  
+  .raindrop:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .raindrop:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .raindrop:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  .raindrop:nth-child(4) {
+    animation-delay: 1.5s;
+  }
+  
+  /* Répétition des délais pour créer un effet continu */
+  .raindrop:nth-child(n+5) {
+    animation-delay: calc((var(--duration) / var(--count)) * (n - 3));
+  }
+  
+  /* Ajoutez plus de règles .raindrop:nth-child(n) pour chaque goutte */
+  
+  @keyframes raindropAnimation {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100vh);
+    }
+  }
+  

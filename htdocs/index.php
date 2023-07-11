@@ -15,7 +15,7 @@ include 'connexion.php';
 
 </head>
 <body>
-<canvas id="canvas"></canvas>
+<div id="rain-container"></div>
 
 <section id="s_connexion" class="vh-100 s_connexion">
     <div class="container  h-150">
@@ -55,7 +55,9 @@ include 'connexion.php';
 </section>
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/main.js"></script>
+<script src="particles.js-master/particles.js"></script>
 </body>
 </html>

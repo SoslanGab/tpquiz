@@ -24,14 +24,15 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         )
     );
 }
-?> 
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/design.css">
     <title>Quizz</title>
@@ -39,10 +40,10 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 <body>
 <!-- effets arrière plan -->
 
-<canvas id="canvas"></canvas>
-<!-- effets arrière plan -->
+<div id="rain-container"></div>
 
-<section class="s_connexion">
+
+<section id= s_connexion class="vh-100 s_connexion">
     <div class="container mt-sm-5 my-1">
         <div id="question-container" class="question ml-sm-5 pl-sm-5 pt-2"></div>
         <div class="d-flex align-items-center pt-3">
@@ -62,8 +63,10 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
     </div>
 </section>
 
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/main.js"></script>
+<script src="particles.js-master/particles.js"></script>
 <script>
     $(document).ready(function() {
         var questions = <?php echo json_encode($questions); ?>;
