@@ -3,26 +3,27 @@
 include 'connexion.php';
 
 
-$query = $bdd->prepare("SELECT * FROM user");
-$query->execute();
-$users = $query->fetchAll(PDO::FETCH_ASSOC);
+if (isset($_POST['nickname'])) {
 
-
-if (isset($_POST['connect'])) {
     $nickname = $_POST['nickname'];
-
-    $query = $bdd->prepare("SELECT id FROM user WHERE nickname = :nickname");
-    $query->execute([':nickname' => $nickname]);
+    $query = $bdd->prepare("SELECT * FROM user WHERE nickname = :nickname");
+    $query->execute([
+        ':nickname' => $nickname
+    ]);
     $user = $query->fetch(PDO::FETCH_ASSOC);
 
-    if ($user) {
-        $userid = $user['id'];
-    } else {
+    if (!$user) {
         $insertQuery = $bdd->prepare("INSERT INTO user (nickname) VALUES (:nickname)");
         $insertQuery->execute([':nickname' => $nickname]);
         $userid = $bdd->lastInsertId();
+    } else {
+        $userid = $user['id'];
     }
+
+    $_SESSION['user_id'] = $userid;
 }
+
 header('Location: quizz.php?userid=' . $userid);
+
 
 
