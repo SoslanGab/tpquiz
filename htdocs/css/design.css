@@ -41,7 +41,7 @@ a {
     border-radius: 40px;
   }
   
-  a span {
+    span {
     position: relative;
     color: #fff;
     font-size: 15px;
@@ -50,7 +50,7 @@ a {
     z-index: 1;
   }
   
-  a .liquid {
+    .liquid {
     position: absolute;
     top: -60px;
     left: 0;
@@ -61,8 +61,8 @@ a {
     transition: .5s;
   }
   
-  a .liquid::after,
-  a .liquid::before {
+    .liquid::after,
+    .liquid::before {
     content: '';
     width: 200%;
     height: 200%;

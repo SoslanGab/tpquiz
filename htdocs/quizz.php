@@ -8,13 +8,14 @@ include 'connexion.php';
 $query = "SELECT question, respons, option1, option2, option3 FROM quizz";
 $result = $bdd->query($query);
 
-$userId = $_SESSION['user_id'];
-$user_query = "SELECT user.*, score.scores FROM `user` JOIN score ON user.id = score.userid WHERE user.id = '$userId'";
+$user = $_SESSION['user_id'];
+
+$user_query = "SELECT * FROM `user` JOIN score ON user.id = score.userid WHERE user.id = '$user'";
 $userResult = $bdd->query($user_query);
 
 $user = $userResult->fetch(PDO::FETCH_ASSOC);
-
 var_dump($user);
+
 // Stocker les questions et les options de réponse dans des tableaux
 $questions = array();
 $options = array();

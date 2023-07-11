@@ -1,8 +1,6 @@
 <?php
-
+session_start();
 include 'connexion.php';
-
-
 if (isset($_POST['nickname'])) {
 
     $nickname = $_POST['nickname'];
@@ -22,8 +20,4 @@ if (isset($_POST['nickname'])) {
 
     $_SESSION['user_id'] = $userid;
 }
-
 header('Location: quizz.php?userid=' . $userid);
-
-
-
