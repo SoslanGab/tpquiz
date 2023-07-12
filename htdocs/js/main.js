@@ -1,12 +1,14 @@
-var container = document.getElementById('rain-container');
+       // Votre code JavaScript pour générer les gouttes de pluie ici
+       var container = document.getElementById('rain-container');
+       var numRaindrops = 50;
 
-for (var i = 0; i < 100; i++) {
-  var raindrop = document.createElement('div');
-  raindrop.classList.add('raindrop');
-  container.appendChild(raindrop);
-}
-
-
+       for (var i = 0; i < numRaindrops; i++) {
+           var raindrop = document.createElement('div');
+           raindrop.classList.add('raindrop');
+           raindrop.style.left = Math.random() * 100 + '%';
+           raindrop.style.animationDelay = Math.random() * 4 + 's';
+           container.appendChild(raindrop);
+       }
 
 $(document).ready(function() {
     // Effet de fadeIn sur l'image

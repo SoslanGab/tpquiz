@@ -11,14 +11,11 @@ include 'connexion.php';
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/design.css">
+   
     <title>Quiz</title>
-
 </head>
 <body>
-
-
-
-<div id="rain-container"></div> 
+    <div id="rain-container"></div>
 
 <section id="s_connexion" class="vh-100 s_connexion">
     <div class="container  h-150">
