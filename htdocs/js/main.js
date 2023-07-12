@@ -36,8 +36,9 @@ $(document).ready(function() {
     document.getElementById('play').addEventListener('click', function() {
       // Effectuer ici les actions souhaitées lors du clic sur le bouton Play
       // Par exemple, vous pouvez utiliser JavaScript pour envoyer les données à la base de données
+    });
   });
-  });
+  
 
 
   

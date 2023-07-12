@@ -142,3 +142,40 @@ font-size : 1.9rem;
     background-color: red;
     color: white;
 }
+
+/* le quizz  */
+.s_connexion .container .choix {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem auto 3rem;
+    width: 500px;
+  }
+.s_connexion .container .choix input {
+    flex: 1 0 45%;
+    width: 200px;
+    height: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin: 0.4rem;
+    outline: none;
+    background: #dfe4ea;
+    user-select: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+.s_connexion .container .choix input:hover {
+    background: #ffa502;
+    transition: 0.5s;
+  }
+.s_connexion .container .choix input:active {
+    transform: scale(0.9);
+    transition: transform 0.1s;
+  }
+.s_connexion .container .choix input p {
+    font-size: 1.3rem;
+  }
+  body #progress {
+    font-size: 1.3rem;
+    color: #ffa502;
+  }
