@@ -133,14 +133,12 @@ font-size : 1.9rem;
     transform: translate(-50%, -50%) scale(1);
 }
 
-.options label.correct {
+.correct {
     background-color: green;
-    color: white;
 }
 
-.options label.incorrect {
+.incorrect {
     background-color: red;
-    color: white;
 }
 
 /* le quizz  */
@@ -179,3 +177,4 @@ font-size : 1.9rem;
     font-size: 1.3rem;
     color: #ffa502;
   }
+
