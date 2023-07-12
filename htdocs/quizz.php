@@ -38,10 +38,11 @@ include 'connexion.php';
             <h2 class="text-center" id="question"><?php echo $quizz['question'] ?></h2>
             <div class="choix">
             <div class="choix">
-                <?php foreach ([$option1, $option2, $option3, $correctAnswer] as $answer) { ?>
-                    <input class="btn" onclick="checkAnswer(this.value)" value="<?php echo $answer; ?>">
-                    <p id=""></p>
-                <?php } ?>
+                <input id="guess0" class="btn" onclick="checkAnswer(this.value)">
+                <input id="guess1" class="btn" onclick="checkAnswer(this.value)">
+                <input id="guess2" class="btn" onclick="checkAnswer(this.value)">
+                <input id="guess3" class="btn" onclick="checkAnswer(this.value)">
+
             </div>
 
             </div>
@@ -74,6 +75,7 @@ include 'connexion.php';
         document.getElementById('guess0').setAttribute('placeholder', questions[index]['option1']);
         document.getElementById('guess1').setAttribute('placeholder', questions[index]['option2']);
         document.getElementById('guess2').setAttribute('placeholder', questions[index]['option3']);
+        document.getElementById('guess3').setAttribute('placeholder', questions[index]['respons']);
     }
 
     function goToPreviousQuestion(event) {
