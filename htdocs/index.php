@@ -15,7 +15,7 @@ include 'connexion.php';
 
 </head>
 <body>
-<!-- <div id="rain-container"></div> -->
+<div id="rain-container"></div> 
 
 <section id="s_connexion" class="vh-100 s_connexion">
     <div class="container  h-150">
@@ -26,18 +26,14 @@ include 'connexion.php';
                     <div class="form-outline mb-4">
                         <input name="nickname" type="text" id="form1Example13" class="form-control form-control-lg" required/>
                         <label class="form-label" for="form1Example13">Login</label>
-                       </div> 
-
-                    <a href="traitement.php" class="buttonplay">
+                        
+                    <button type="submit" class="buttonplay custom">
                         <span>Play</span> 
                     <div class="liquid">
-                        <input type="submit" value="Play" class="liquid">
                     </div>
-                        
-                        
-                    <!-- Submit button -->
-                   
+                 </div>
 
+                    <!-- Submit button -->
                     <div class="divider d-flex align-items-center my-4">
                         <p class="text-center fw-bold mx-3 mb-0 text-muted">Suivez-nous</p>
                     </div>
@@ -50,6 +46,7 @@ include 'connexion.php';
                     </a>
                 </form>
             </div>
+
             <div class="col-md-8 col-lg-5 col-xl-6">
                 <img src="image/quizfilm.jpg" class="img-fluid" alt="image">
             </div>        

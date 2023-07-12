@@ -1,17 +1,8 @@
 var container = document.getElementById('rain-container');
-var numRaindrops = 100;
-var animationDuration = 4; // Durée totale de l'animation en secondes
 
-for (var i = 0; i < numRaindrops; i++) {
+for (var i = 0; i < 100; i++) {
   var raindrop = document.createElement('div');
   raindrop.classList.add('raindrop');
-  raindrop.style.left = Math.random() * 100 + '%';
-  
-  // Calculer le délai d'animation pour chaque goutte en fonction de son index et de la durée totale
-  var animationDelay = (i * animationDuration) / numRaindrops;
-  raindrop.style.animationDelay = animationDelay + 's';
-  
-  raindrop.style.height = Math.random() * (100 - 20) + 20 + 'px'; // Taille aléatoire entre 20px et 100px
   container.appendChild(raindrop);
 }
 
@@ -40,6 +31,10 @@ $(document).ready(function() {
       $(this).addClass('animate__animated animate__rubberBand');
       // Effectuer les actions de connexion ici
     });
+    document.getElementById('play').addEventListener('click', function() {
+      // Effectuer ici les actions souhaitées lors du clic sur le bouton Play
+      // Par exemple, vous pouvez utiliser JavaScript pour envoyer les données à la base de données
+  });
   });
 
 

@@ -1,3 +1,6 @@
+<?php
+include 'connexion.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +15,8 @@
 </head>
 <body>
     <!-- effets arrière plan -->
-    <!-- <canvas id="canvas"></canvas> -->
-    <!-- effets arrière plan -->
 
-<!-- <div id="rain-container"></div> -->
+ <div id="rain-container"></div> 
 
 
 <section id="s_connexion" class="vh-100 s_connexion">
