@@ -16,7 +16,7 @@ include 'connexion.php';
 </head>
 <body>
 
-supprime moi une fois que tas pull
+
 
 <div id="rain-container"></div> 
 
