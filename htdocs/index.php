@@ -1,5 +1,8 @@
 <?php
 include 'connexion.php';
+
+query = $bdd->prepare("SELECT * FROM user WHERE nickname = :nickname");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
