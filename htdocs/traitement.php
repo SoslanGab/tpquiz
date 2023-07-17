@@ -16,8 +16,7 @@ if (isset($_POST['nickname'])) {
         $userid = $bdd->lastInsertId();
     } else {
         $userid = $user['id'];
-    }
-
+    }    
     $_SESSION['user_id'] = $userid;
 }
 header('Location: quizz.php?userid=' . $userid);

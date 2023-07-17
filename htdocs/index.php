@@ -28,10 +28,10 @@ include 'connexion.php';
                         <label class="form-label" for="form1Example13">Login</label>
                        </div> 
 
-                    <a href="traitement.php" class="buttonplay">
-                        <span>Play</span> 
-                    <div class="liquid">
-                        <input type="submit" value="Play" class="liquid">
+                       <!-- <a href="traitement.php" class="buttonplay">
+                        <span>Play</span>  -->
+                    <div class="">
+                        <input href="traitement.php"  type="submit" value="Play" class="liquid">
                     </div>
                         
                         
