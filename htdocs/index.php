@@ -1,5 +1,8 @@
 <?php
 include 'connexion.php';
+
+query = $bdd->prepare("SELECT * FROM user WHERE nickname = :nickname");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,11 +14,11 @@ include 'connexion.php';
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/design.css">
-    <title>Quizz</title>
-
+   
+    <title>Quiz</title>
 </head>
 <body>
-<!-- <div id="rain-container"></div> -->
+    <div id="rain-container"></div>
 
 <section id="s_connexion" class="vh-100 s_connexion">
     <div class="container  h-150">
@@ -28,16 +31,14 @@ include 'connexion.php';
                         <label class="form-label" for="form1Example13">Login</label>
                        </div> 
 
-                       <!-- <a href="traitement.php" class="buttonplay">
-                        <span>Play</span>  -->
-                    <div class="">
-                        <input href="traitement.php"  type="submit" value="Play" class="liquid">
+                    <a href="traitement.php" class="buttonplay">
+                        <span>Play</span> 
+                    <div class="liquid">
+                        <input type="submit" value="Play" class="liquid">
                     </div>
-                        
-                        
-                    <!-- Submit button -->
-                   
+                 </div>
 
+                    <!-- Submit button -->
                     <div class="divider d-flex align-items-center my-4">
                         <p class="text-center fw-bold mx-3 mb-0 text-muted">Suivez-nous</p>
                     </div>
@@ -50,6 +51,7 @@ include 'connexion.php';
                     </a>
                 </form>
             </div>
+
             <div class="col-md-8 col-lg-5 col-xl-6">
                 <img src="image/quizfilm.jpg" class="img-fluid" alt="image">
             </div>        
